@@ -1,16 +1,22 @@
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+load_dotenv('.env')
 
-SECRET_KEY = (
-    'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'
-)
+SECRET_KEY = os.getenv('SECRET_KEY', default='NOP')
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '123.123.123.123', 'dockertask'] 
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    '89.169.180.33',
+    'fedorpalich.viewdns.net',
+]
 
 
 # Application definition
