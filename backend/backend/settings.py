@@ -15,7 +15,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     '89.169.180.33',
-    'fedorpalich.viewdns.net',
+    'fedorpalich.duckdns.org',
 ]
 
 
